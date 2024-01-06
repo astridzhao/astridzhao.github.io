@@ -8,15 +8,50 @@ const textLinks: { label: string; href: string }[] = [
 	{ label: 'Home', href: '/' },
 	{ label: 'Work', href: '/work/' },
 	{ label: 'About', href: '/about/' },
-	{ label: 'CV', href: 'https://drive.google.com/file/d/1AROsBCJH2SCVf5gnoge84npzUNQMp_-M/view?usp=sharing' },
+	{ label: 'CV', href: '/assets/Resume_Ziyin Zhao.pdf' },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
-const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
-	{ label: 'GitHub', href: 'https://github.com/me', icon: 'github-logo' },
-	{ label: 'Linkedln', href: 'https://codepen.io/me', icon: 'linkedln-logo' },
+const iconLinks: { label: string; href: string; id:string; icon: keyof typeof iconPaths }[] = [
+	{ label: 'GitHub', href: 'https://github.com/AstridZhao?tab=repositories', id: 'github-logo' , icon: 'github-logo' },
+	{ label: 'Linkedln', href: 'https://www.linkedin.com/in/ziyin-zhao/',id: 'linkedln-logo' ,  icon: 'linkedln-logo' },
+	// { label: 'Email', href: 'Email:aastridzhao [at] gmail [dot] come', icon: 'email-logo' },
+	{ label: 'Email', href: 'Email: aastridzhao [at] gmail [dot] com', id: 'email-Icon' , icon: 'email-logo'},
 ];
 ---
+<!-- <div id="icons">
+    <a href="https://github.com/AstridZhao?tab=repositories" id="github-logo">
+    </a>
+    <a href="https://www.linkedin.com/in/ziyin-zhao/" id="linkedln-logo">
+    </a>
+    <a href="javascript:;" id="email-Icon">
+    </a>
+</div>
+
+<div id="emailPopup" style="display:none;">
+    <p>Email: aastridzhao [at] gmail [dot] com</p>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+<script type="module">
+   function showPopup() {
+        document.getElementById('emailPopup').style.display = 'flex';
+    }
+
+    function closePopup() {
+        document.getElementById('emailPopup').style.display = 'none';
+    }
+
+	 // If you're setting up event listeners dynamically
+	window.addEventListener('load', () => {
+        const emailIcon = document.getElementById('email-Icon');
+        if (emailIcon) {
+            emailIcon.addEventListener('click', showPopup);
+        }
+        const closeButton = document.querySelector('#emailPopup button');
+        closeButton.addEventListener('click', closePopup);
+    });
+</script> -->
 
 <nav>
 	<div class="menu-header">
@@ -149,6 +184,8 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	}
 	customElements.define('menu-button', MenuButton);
 </script>
+
+
 
 <style>
 	nav {

@@ -1,6 +1,6 @@
 ---
 title: Moho Bot
-publishDate: 2023-12-05
+publishDate: 2023-12-11
 
 img: /assets/mohobot.png
 description: |

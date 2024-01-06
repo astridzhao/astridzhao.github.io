@@ -1,6 +1,6 @@
 ---
 title: EDB File Transformer
-publishDate: 2019-10-02 00:00:00
+publishDate: 2023-08-11 00:00:00
 img: /assets/edb.png
 description: |
   Built an EDB-Downstream File Transformer for Trading Order Activity

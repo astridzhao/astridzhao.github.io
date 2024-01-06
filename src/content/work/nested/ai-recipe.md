@@ -1,7 +1,7 @@
 ---
 title: AI Recipe
-publishDate: 2023-12-18
-img: /assets/airecipe.png
+publishDate: 2023-12-05
+img: /assets/ai-recipe2.png
 description: |
   Engineered an innovative full-stack web application to deliver personalized recipes with available ingredients.
 tags:
@@ -18,3 +18,4 @@ Implementing *REST API* and *multi-threading* for optimized backend-frontend com
 
 [View Github Repository](https://github.com/astridzhao/AI_recipe-Llama-)
 
+![Input Interface](/assets/airecipe.png)

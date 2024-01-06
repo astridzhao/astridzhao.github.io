@@ -51,29 +51,6 @@ const projects = (await getCollection('work'))
 			<Skills />
 		</div>
 
-		<section class="section with-background bg-variant">
-			<div class="section-header stack ">
-				<h3>My CV</h3>
-				<div class="cta" >
-					<CallToAction href="https://drive.google.com/file/d/1AROsBCJH2SCVf5gnoge84npzUNQMp_-M/view?usp=sharing">
-						View
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
-				</div>
-			</div>
-
-			<div class="gallery">
-				<Grid variant="small">
-					{
-						['Morgan Stanley', 'Mount Holyoke College', 'ECEP', 'Global Pacific Securities'].map((brand) => (
-							<li class="mention-card">
-								<p>{brand}</p>
-							</li>
-						))
-					}
-				</Grid>
-			</div>
-		</section>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
@@ -101,7 +78,34 @@ const projects = (await getCollection('work'))
 					</CallToAction>
 				</div>
 			</section>
+
+			<section class="section with-background bg-variant">
+				<div class="section-header stack ">
+					<h3>My CV</h3>
+					<div class="cta" >
+						<CallToAction href="/assets/Resume_Ziyin Zhao.pdf">
+							View
+							<Icon icon="arrow-right" size="1.2em" />
+						</CallToAction>
+					</div>
+				</div>
+
+				<div class="gallery">
+					<Grid variant="small">
+						{
+							['Morgan Stanley', 'ECEP', 'Global Pacific Securities'].map((brand) => (
+								<li class="mention-card">
+									<p>{brand}</p>
+								</li>
+							))
+						}
+					</Grid>
+				</div>
+			</section>
+
 		</main>
+
+		
 
 	</div>
 </BaseLayout>
