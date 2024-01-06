@@ -1,0 +1,113 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Astrid Zhao" description="About Astrid Zhao">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero 
+				title="About"
+			>
+			<p>Personal-Drive mindset with great energy • Strong problem-solving skills • Enthusiasm to learn new materials</p>
+
+				<img
+					width="1553"
+					height="873"
+					src="/assets/schoolphoto.JPG"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						I started Computer Science in my sophomore year of college. My interests mostly are in software design and artifical intelligence. 
+						I have been done tutor and CS mentor in school for 2 years, loving help people to solve their coding problems and giving them supports on their CS journey.
+					</p>
+					<p>
+						I am also a horse rider, a dancer, a traveler, and a writer. I won the TOP 10 Intro Rider awards in National Equestrian Competition in 2022. 
+					</p>
+				</div>
+			</section>
+
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p>College: Mount Holyoke College (2020.8-2023.12)</p>
+					<p>GPA: 3.92/4.0</p>
+					<p>Major: Computer Science</p>
+					<p>Minor: Statistics</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>Java • Python • R • C • Dart • JavaScripts • CSS • HTML • JSON • Tableau • Linux  </p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
