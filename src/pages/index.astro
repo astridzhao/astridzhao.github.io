@@ -24,19 +24,20 @@ const projects = (await getCollection('work'))
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-<BaseLayout>
+<BaseLayout title="Astrid Zhao | AI Engineer &amp; Software Developer" description="Astrid Zhao is a New York-based software engineer building agentic AI, reliable regulatory systems, and human-centered technology.">
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Astrid Zhao."
-					tagline="I am a New Graduate SWE who is currently based in NYC, New York."
+					title="Hi, I’m Astrid Zhao."
+					tagline="I build AI systems that help people solve complex problems and make better decisions."
 					align="start"
 				>
+					<p class="intro">I’m a Technology Associate at Morgan Stanley in New York, working at the intersection of production software, regulatory reporting, and agentic AI. I care about what makes AI genuinely useful—and how we know when to trust its recommendations.</p>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
-						<Pill><Icon icon="horse" size="1.33em" /> Horse Rider</Pill>
+						<Pill><Icon icon="code" size="1.33em" /> AI Engineer</Pill>
+						<Pill><Icon icon="terminal-window" size="1.33em" /> Systems Builder</Pill>
+						<Pill><Icon icon="horse" size="1.33em" /> Equestrian</Pill>
 					</div>
 				</Hero>
 
@@ -54,8 +55,8 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Project</h3>
-					<p>Take a look at some of my featured work from the past 2 years.</p>
+					<h3>Featured Work</h3>
+					<p>From multi-agent troubleshooting to developer tooling and community platforms.</p>
 				</header>
 
 				<div class="gallery">
@@ -80,10 +81,10 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<div class="section-header stack ">
-					<h3>My CV</h3>
+					<h3>Experience &amp; Community</h3>
 					<div class="cta" >
-						<CallToAction href="/assets/Resume_Ziyin Zhao.pdf">
-							View
+						<CallToAction href="/resume/">
+							View Resume
 							<Icon icon="arrow-right" size="1.2em" />
 						</CallToAction>
 					</div>
@@ -92,7 +93,7 @@ const projects = (await getCollection('work'))
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Morgan Stanley', 'ECEP', 'Global Pacific Securities'].map((brand) => (
+							['Morgan Stanley', 'Mount Holyoke College', 'Bonjour Girls'].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>
@@ -118,7 +119,15 @@ const projects = (await getCollection('work'))
 	}
 
 	.roles {
-		display: none;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.intro {
+		max-width: 57ch;
+		color: var(--gray-300);
+		font-size: var(--text-base);
 	}
 
 	.hero img {
