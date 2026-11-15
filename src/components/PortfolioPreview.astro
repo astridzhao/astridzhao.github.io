@@ -10,7 +10,7 @@ const { data, slug } = Astro.props.project;
 
 <a class="card" href={`/work/${slug}`}>
 	<span class="title">{data.title}</span>
-	<img src={data.img} loading="lazy" decoding="async" style="width: auto; height: auto;"/>
+	<img src={data.img} alt={data.img_alt || `${data.title} project illustration`} loading="lazy" decoding="async" />
 </a>
 
 <style>
