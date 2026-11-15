@@ -1,113 +1,53 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-
 import ContactCTA from '../components/ContactCTA.astro';
 import Hero from '../components/Hero.astro';
 ---
-
-<BaseLayout title="About | Astrid Zhao" description="About Astrid Zhao">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero 
-				title="About"
-			>
-			<p>Personal-Drive mindset with great energy • Strong problem-solving skills • Enthusiasm to learn new materials</p>
-
-				<img
-					width="1553"
-					height="873"
-					src="/assets/schoolphoto.JPG"
-				/>
-			</Hero>
-
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						I started Computer Science in my sophomore year of college. My interests mostly are in software design and artifical intelligence. 
-						I have been done tutor and CS mentor in school for 2 years, loving help people to solve their coding problems and giving them supports on their CS journey.
-					</p>
-					<p>
-						I am also a horse rider, a dancer, a traveler, and a writer. I won the TOP 10 Intro Rider awards in National Equestrian Competition in 2022. 
-					</p>
-				</div>
-			</section>
-
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>College: Mount Holyoke College (2020.8-2023.12)</p>
-					<p>GPA: 3.92/4.0</p>
-					<p>Major: Computer Science</p>
-					<p>Minor: Statistics</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>Java • Python • R • C • Dart • JavaScripts • CSS • HTML • JSON • Tableau • Linux  </p>
-				</div>
-			</section>
-		</main>
-
-		<ContactCTA />
-	</div>
+<BaseLayout title="About | Astrid Zhao" description="Learn about Astrid Zhao's engineering background, curiosity, teaching, and community work.">
+  <div class="stack gap-20">
+    <main class="wrapper about">
+      <Hero title="Beyond the code" tagline="Curious builder, thoughtful engineer, lifelong learner.">
+        <img width="1553" height="873" src="/assets/schoolphoto.JPG" alt="Astrid's college experience" />
+      </Hero>
+      <section>
+        <h2 class="section-title">My story</h2>
+        <div class="content">
+          <p>I'm Astrid (Ziyin) Zhao, a New York-based software engineer and Technology Associate at Morgan Stanley. I work on regulatory reporting infrastructure and agentic AI tools that help engineers investigate difficult problems and make better-informed decisions.</p>
+          <p>Building RRE.ai deepened my interest in a question that goes beyond model accuracy: how can AI and human experts work together to make better decisions, especially when mistakes matter? I enjoy turning hard, real-world problems into working systems—and learning from the limitations those systems reveal.</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Experience</h2>
+        <div class="content">
+          <p><strong>Morgan Stanley · Technology Associate</strong> (2024–present). Engineering reliable capital-markets regulatory reporting systems; building agentic diagnostics and specification-driven validation tools.</p>
+          <p><strong>Morgan Stanley · Software Engineering Intern</strong> (summer 2023). Built Java/Spring and Apache Camel integrations for order-activity file transformation and prototyped AI-assisted trade-metrics retrieval.</p>
+          <p><a href="/resume/">Explore my full experience and skills →</a></p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <div class="content">
+          <p><strong>Mount Holyoke College</strong> · B.A. in Computer Science and Data Science, minor in Statistics (2023). GPA: 3.92/4.00; magna cum laude; Mu Sigma Rho Statistics Honor Society.</p>
+          <p>I also studied at AIT Budapest, exploring deep learning and computational problem-solving.</p>
+        </div>
+      </section>
+      <section>
+        <h2 class="section-title">Outside of engineering</h2>
+        <div class="content">
+          <p>Teaching and community-building matter to me. I spent three years supporting students in computer science and quantitative courses, mentor with Girls Who Code, and contribute to technology for the Bonjour Girls women's community.</p>
+          <p>I joined my college's equestrian team as a beginner and went on to place in the top ten at the 2022 IHSA national competition. I also love writing, exploring cities, and bringing people together.</p>
+        </div>
+      </section>
+    </main>
+    <ContactCTA />
+  </div>
 </BaseLayout>
-
 <style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
-
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
-	.content {
-		grid-column: 2 / 4;
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
+  .about{display:flex;flex-direction:column;gap:3.5rem}
+  img{margin-top:1.5rem;border-radius:1.5rem;box-shadow:var(--shadow-md)}
+  section{display:flex;flex-direction:column;gap:.8rem;color:var(--gray-200)}
+  .section-title{grid-column-start:1;font-size:var(--text-xl);color:var(--gray-0)}
+  .content{grid-column:2 / 4;display:grid;gap:1rem}
+  .content a{text-decoration:underline;text-underline-offset:.25em}
+  @media(min-width:50em){.about{display:grid;grid-template-columns:1fr 60% 1fr}.about>:first-child{grid-column-start:2}section{display:contents;font-size:var(--text-lg)}}
 </style>
