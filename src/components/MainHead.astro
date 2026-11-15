@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-	title = 'Astrid Zhao: Personal Site',
-	description = 'The personal site of Astrid Zhao',
+	title = 'Astrid Zhao | AI Engineering & Software Systems',
+	description = 'Astrid Zhao builds agentic AI, production software, and reliable human-AI workflows in New York.',
 } = Astro.props;
 ---
 
@@ -17,6 +17,8 @@ const {
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
+<meta property="og:title" content={title} />
+<meta property="og:type" content="website" />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
