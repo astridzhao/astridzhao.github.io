@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+---
+<BaseLayout title="Resume | Astrid Zhao" description="Astrid Zhao's current professional experience, engineering projects, education, and technical skills.">
+  <div class="stack gap-20">
+    <main class="wrapper resume stack gap-10">
+      <Hero title="Experience & Skills" tagline="AI engineering, production systems, and thoughtful collaboration." align="start" />
+      <p class="summary">I'm a Technology Associate at Morgan Stanley with over two years of experience building software for regulated environments, multi-agent AI workflows, and developer tools.</p>
+      <section>
+        <h2>Professional experience</h2>
+        <div class="entry"><div class="heading"><h3>Morgan Stanley · Technology Associate</h3><span>Feb 2024 – Present · New York</span></div>
+          <ul>
+            <li>Initiated and developed RRE.ai, a Semantic Kernel-based multi-agent diagnostic tool for regulatory reporting errors, combining specification retrieval, data investigation, and SQL repair proposals subject to engineer review.</li>
+            <li>Improved diagnostic accuracy from approximately 60% to 95% on an internal evaluation set by restructuring specification retrieval around event-specific business context; human review remains required for recommendations.</li>
+            <li>Introduced specification-driven development for regulatory validation, achieving 100% mapped specification coverage and reducing the development cycle by approximately 75%; presented the methodology at a technology expo.</li>
+            <li>Built MCP and Copilot-enabled workflows for specification-to-Jira story generation and cross-team engineering coordination.</li>
+            <li>Own and support production regulatory reporting and reconciliation systems during live market hours, with an emphasis on reliability, observability, and incident response.</li>
+          </ul>
+        </div>
+        <div class="entry"><div class="heading"><h3>Morgan Stanley · Software Engineering Intern</h3><span>May – Aug 2023 · New York</span></div>
+          <ul>
+            <li>Developed a Java, Spring Boot, and Apache Camel file transformation workflow for order activity, reducing cross-team communication time by over 70% in the project context.</li>
+            <li>Prototyped an AI chatbot for trade metrics using Python, DB2, and prompt engineering.</li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2>Selected projects</h2>
+        <p><strong>Bonjour Girls community platform:</strong> Built web and mobile-oriented member management, volunteer operations, and analytics tools with Python, TypeScript, Firestore, and cloud deployment.</p>
+        <p><strong>Starbucks Genie:</strong> Built a full-stack, multi-agent drink customization application with React, CrewAI, Supabase, Railway, and Vercel.</p>
+        <p><strong>RiceBucket / AI Recipe:</strong> Developed personalized recipe experiences with language models, web/mobile interfaces, and REST APIs.</p>
+        <p><a href="/work/">Read project case studies →</a></p>
+      </section>
+      <section><h2>Education</h2>
+        <p><strong>Mount Holyoke College</strong> · B.A., Computer Science and Data Science; minor in Statistics · 2020–2023 · GPA 3.92/4.00 · Magna Cum Laude</p>
+        <p><strong>AIT Budapest</strong> · Study abroad, Spring 2023</p>
+      </section>
+      <section><h2>Technical toolkit</h2>
+        <p><strong>Languages:</strong> Java, Python, TypeScript, JavaScript, SQL, R, Go, C</p>
+        <p><strong>AI & agents:</strong> Semantic Kernel, MCP, retrieval-augmented generation, agent orchestration, Claude Code, GitHub Copilot</p>
+        <p><strong>Systems & web:</strong> Spring Boot, Apache Kafka, Apache Camel, React, Node.js, Flask, Linux, Docker, Jenkins, Jira</p>
+        <p><strong>Cloud & data:</strong> Azure, AWS, DB2, Firestore, Firebase, Snowflake</p>
+      </section>
+      <section><h2>Community & recognition</h2>
+        <p>Computer science teaching assistant and mentor · Girls Who Code mentor · Bonjour Girls volunteer and builder · 2022 IHSA Nationals top-ten equestrian rider · Mu Sigma Rho Statistics Honor Society</p>
+      </section>
+    </main>
+    <ContactCTA />
+  </div>
+</BaseLayout>
+<style>
+  .resume{max-width:62rem}.summary{max-width:65ch;font-size:var(--text-lg);color:var(--gray-200)}
+  section{display:grid;gap:1rem;border-top:1px solid var(--gray-800);padding-top:2rem}
+  section h2{font-size:var(--text-2xl)}
+  .entry{display:grid;gap:1rem;margin-bottom:1.5rem}
+  .heading{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.6rem}
+  .heading h3{font-size:var(--text-lg)}.heading span{color:var(--gray-400)}
+  ul{padding-left:1.5rem;display:grid;gap:.8rem}
+  a{text-decoration:underline;text-underline-offset:.25em}
+</style>
